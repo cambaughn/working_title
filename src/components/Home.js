@@ -14,15 +14,24 @@ import BottomNavBar from './BottomNavBar';
 const Home = ({ navigator }) => {
 
   return (
-    <View>
-
+    <View style={styles.background} >
+      <Text style={styles.welcomeText}>Welcome! Press search below to find friends and family!</Text>
     </View>
   )
 };
 
 // stylin'!
 const styles = {
-
+  background: {
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  welcomeText: {
+    width: Dimensions.get('window').width - 80,
+    textAlign: 'center',
+  },
 }
 
 
