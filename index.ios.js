@@ -10,6 +10,7 @@ import {
   Navigator
 } from 'react-native';
 import Login from './src/components/Login';
+import Home from './src/components/Home';
 import Map from './src/components/Map';
 import BottomNavBar from './src/components/BottomNavBar';
 import ChatList from './src/components/ChatList';
@@ -25,27 +26,27 @@ class compass2 extends Component {
     const { name, passProps } = route;
     if (name === 'Login') {
       return <Login navigator={navigator} />
-    } else if (name === 'Map') {
+    } else if (name === 'Home') {
       return (
-        <View> 
-          <Map navigator={navigator} />
-          <BottomNavBar viewLabel={'Map'} navigator={navigator} /> 
+        <View>
+          <Home navigator={navigator} />
+          <BottomNavBar viewLabel={'Home'} navigator={navigator} />
         </View>
         )
     } else if (name === 'ChatList') {
       return (
-        <View> 
+        <View>
           <ChatList navigator={navigator} />
-          <BottomNavBar viewLabel={'Chat'} navigator={navigator} /> 
+          <BottomNavBar viewLabel={'Chat'} navigator={navigator} />
         </View>
       )
     } else if (name === 'Chat') {
       return <Chat navigator={navigator} />
     } else if (name === 'UserProfile') {
       return (
-        <View> 
+        <View>
           <UserProfile navigator={navigator} />
-          <BottomNavBar viewLabel={'User'} navigator={navigator} /> 
+          <BottomNavBar viewLabel={'User'} navigator={navigator} />
         </View>
       )
     }
@@ -56,7 +57,7 @@ class compass2 extends Component {
     return (
       <Navigator
       style={{ backgroundColor: 'white', }}
-      initialRoute={{ name:'Login' }}
+      initialRoute={{ name:'Home' }}
       renderScene={this.renderScene}
       navigationBar={
         <Navigator.NavigationBar
@@ -100,9 +101,3 @@ const styles = {
 }
 
 AppRegistry.registerComponent('compass2', () => compass2);
-
-
-
-
-
-

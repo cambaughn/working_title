@@ -9,13 +9,12 @@ import {
   MapView,
 } from 'react-native';
 
-import { fullPageView } from '../styles/globalStyles';
 import BottomNavBar from './BottomNavBar';
 
-const Map = ({ navigator }) => {
+const Home = ({ navigator }) => {
 
   return (
-    <View style={fullPageView}>
+    <View>
 
     </View>
   )
@@ -27,4 +26,4 @@ const styles = {
 }
 
 
-export default Map;
+export default Home;

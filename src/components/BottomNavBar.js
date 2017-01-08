@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { 
-  Text, 
-  View, 
-  Image, 
-  Dimensions, 
+import {
+  Text,
+  View,
+  Image,
+  Dimensions,
   TouchableHighlight,
 } from 'react-native';
 
@@ -12,7 +12,7 @@ import colors from '../styles/colors';
 const BottomNavBar = ({ navigator, viewLabel }) => {
 
   // destructuring the styles for easier readability inside of returned JSX
-  const { 
+  const {
     bottomBar,
     navButton,
     text,
@@ -20,8 +20,8 @@ const BottomNavBar = ({ navigator, viewLabel }) => {
 
 
   const menu = [
-    {label: 'Map', navTo: 'Map'}, 
-    {label: 'Chat', navTo: 'ChatList'}, 
+    {label: 'Home', navTo: 'Home'}, 
+    {label: 'Chat', navTo: 'ChatList'},
     {label: 'User', navTo: 'UserProfile'}
   ];
 
@@ -33,9 +33,9 @@ const BottomNavBar = ({ navigator, viewLabel }) => {
         style = {...text, ...{color: colors.lightBlue}};
       }
       return (
-        <TouchableHighlight 
-          onPress={() => navigator.push({name: option.navTo})} 
-          underlayColor={colors.extraLightGrey} 
+        <TouchableHighlight
+          onPress={() => navigator.push({name: option.navTo})}
+          underlayColor={colors.extraLightGrey}
           key={option.label}
         >
           <Text style={style}>{option.label}</Text>
