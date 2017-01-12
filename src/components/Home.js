@@ -11,12 +11,13 @@ import {
 
 import Emoji from 'react-native-emoji';
 
-import BottomNavBar from './BottomNavBar';
+import Answer from './Answer';
 
 const Home = ({ navigator }) => {
 
   return (
     <View style={styles.background} >
+      <Answer />
       <Text style={styles.welcomeText}> Welcome! <Emoji name="tada"/> </Text>
       <Text style={styles.welcomeText}> Press <Emoji name="mag"/> below to find friends and family!</Text>
     </View>
@@ -30,6 +31,7 @@ const styles = {
     height: Dimensions.get('window').height,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'white',
   },
   welcomeText: {
     width: Dimensions.get('window').width - 80,
