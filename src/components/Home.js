@@ -17,7 +17,6 @@ const Home = ({ navigator }) => {
 
   return (
     <View style={styles.background} >
-      <Answer />
       <Text style={styles.welcomeText}> Welcome! <Emoji name="tada"/> </Text>
       <Text style={styles.welcomeText}> Press <Emoji name="mag"/> below to find friends and family!</Text>
     </View>

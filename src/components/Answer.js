@@ -19,7 +19,6 @@ const Answer = ({ navigator }) => {
         </View>
         <View>
           <Text>Rey</Text>
-          <Text style={styles.smallText}>Scavenger</Text>
         </View>
       </View>
 
@@ -28,10 +27,7 @@ const Answer = ({ navigator }) => {
       </View>
 
       <View style={styles.bottomSection}>
-        <View style={styles.profilePhotoWrapper}>
-          <Image source={require('../assets/images/hanSolo.jpg')} style={styles.profilePhoto}></Image>
-        </View>
-        <Text>Han Solo</Text>
+        <Text style={styles.bottomText}><Text style={styles.askerName}>Han Solo</Text> What is your favorite memory from your childhood?</Text>
       </View>
     </View>
   )
@@ -41,7 +37,6 @@ const Answer = ({ navigator }) => {
 const styles = {
   container: {
     width: Dimensions.get('window').width,
-    height: 400,
 
     flexDirection: 'column',
     alignItems: 'center',
@@ -91,12 +86,20 @@ const styles = {
 
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
+
+    borderBottomColor: '#ecf0f1',
+    borderBottomWidth: 1,
+
   },
 
-  smallText: {
-    fontSize: 10,
-  }
+  bottomText: {
+    width: Dimensions.get('window').width - 40,
+  },
+
+  askerName: {
+    fontWeight: 'bold',
+  },
 }
 
 
