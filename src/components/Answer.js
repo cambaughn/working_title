@@ -9,13 +9,13 @@ import {
   MapView,
 } from 'react-native';
 
-const Answer = ({ navigator }) => {
+const Answer = ({ navigator, question }) => {
 
   return (
     <View style={styles.container} >
       <View style={styles.topSection}>
         <View style={styles.profilePhotoWrapper}>
-          <Image source={require('../assets/images/rey.jpg')} style={styles.profilePhoto}></Image>
+          <Image source={{uri:question.answerer.profilePhoto}} style={styles.profilePhoto}></Image>
         </View>
         <View>
           <Text>Rey</Text>
@@ -27,7 +27,7 @@ const Answer = ({ navigator }) => {
       </View>
 
       <View style={styles.bottomSection}>
-        <Text style={styles.bottomText}><Text style={styles.askerName}>Han Solo</Text> What is your favorite memory from your childhood?</Text>
+        <Text style={styles.bottomText}><Text style={styles.askerName}> {question.asker.name} </Text> {question.asker.question} </Text>
       </View>
     </View>
   )
