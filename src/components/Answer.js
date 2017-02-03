@@ -15,7 +15,7 @@ const Answer = ({ navigator, question }) => {
     <View style={styles.container} >
       <View style={styles.topSection}>
         <View style={styles.profilePhotoWrapper}>
-          <Image source={{uri:question.answerer.profilePhoto}} style={styles.profilePhoto}></Image>
+          <Image source={require('../assets/images/rey.jpg')} style={styles.profilePhoto}></Image>
         </View>
         <View>
           <Text>Rey</Text>

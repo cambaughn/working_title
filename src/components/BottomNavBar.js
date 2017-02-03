@@ -7,6 +7,8 @@ import {
   TouchableHighlight,
 } from 'react-native';
 
+import Emoji from 'react-native-emoji';
+
 import colors from '../styles/colors';
 
 const BottomNavBar = ({ navigator, viewLabel }) => {
@@ -20,9 +22,9 @@ const BottomNavBar = ({ navigator, viewLabel }) => {
 
 
   const menu = [
-    {label: 'Home', navTo: 'Home'}, 
-    {label: 'Chat', navTo: 'ChatList'},
-    {label: 'User', navTo: 'UserProfile'}
+    {label: 'house', navTo: 'Home'},
+    {label: 'mag', navTo: 'ChatList'},
+    {label: 'smile_cat', navTo: 'UserProfile'}
   ];
 
   const renderText = function() {
@@ -38,7 +40,7 @@ const BottomNavBar = ({ navigator, viewLabel }) => {
           underlayColor={colors.extraLightGrey}
           key={option.label}
         >
-          <Text style={style}>{option.label}</Text>
+          <Text style={style}><Emoji name={option.label}/></Text>
         </TouchableHighlight>
       )
     })
