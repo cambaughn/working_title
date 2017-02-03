@@ -23,7 +23,7 @@ const BottomNavBar = ({ navigator, viewLabel }) => {
 
   const menu = [
     {label: 'house', navTo: 'Home'},
-    {label: 'mag', navTo: 'ChatList'},
+    {label: 'mag', navTo: 'Search'},
     {label: 'smile_cat', navTo: 'UserProfile'}
   ];
 

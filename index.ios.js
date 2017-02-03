@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import Login from './src/components/Login';
 import Home from './src/components/Home';
+import Search from './src/components/Search';
 import Map from './src/components/Map';
 import BottomNavBar from './src/components/BottomNavBar';
 import ChatList from './src/components/ChatList';
@@ -33,11 +34,11 @@ class compass2 extends Component {
           <BottomNavBar viewLabel={'Home'} navigator={navigator} />
         </View>
         )
-    } else if (name === 'ChatList') {
+    } else if (name === 'Search') {
       return (
         <View>
-          <ChatList navigator={navigator} />
-          <BottomNavBar viewLabel={'Chat'} navigator={navigator} />
+          <Search navigator={navigator} />
+          <BottomNavBar viewLabel={'Search'} navigator={navigator} />
         </View>
       )
     } else if (name === 'Chat') {
